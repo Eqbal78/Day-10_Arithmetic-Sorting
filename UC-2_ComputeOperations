@@ -4,6 +4,15 @@ read -p:"Enter First Element: " a
 read -p:"Enter Second Element: " b
 read -p:"Enter Third Element: " c
 
-result=$(($a+$b*$c))
+function operation(){
 
-echo $result
+   result=$(($a+$b*$c))
+   result01=$(( ($a+$b) * $c))
+}
+
+operation $a $b $c
+
+echo "Add-Multiplication"
+echo "Result=$result"
+echo "Result01=$result01"
+
