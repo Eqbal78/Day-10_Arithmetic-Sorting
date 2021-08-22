@@ -9,8 +9,11 @@ function operation(){
    result=$(($a+$b*$c))
    result01=$(( ($a+$b) * $c))
 
-   result02=$(($c+$a/$b))
-   result03=$((($c+$a) / $b))
+	result02=$(($a*$b+$c))
+   result03=$(($a*($b+$c)))
+
+   result04=$(($c+$a/$b))
+   result05=$((($c+$a) / $b))
 }
 operation $a $b $c
 
@@ -18,6 +21,10 @@ echo "Add-Multiplication"
 echo "Result=$result"
 echo -e "Result01=$result01\n"
 
-echo "Add-Division"
+echo "Multiplication-Add"
 echo "Result02=$result02"
-echo "Result03=$result03"
+echo -e "Result03=$result03\n"
+
+echo "Add-Division"
+echo "Result04=$result04"
+echo "Result05=$result05"
